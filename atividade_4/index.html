@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alterar Propriedade por ID, Nome e Classe</title>
+</head>
+<body>
+
+<p id="meuParagrafo">Este é um parágrafo com ID.</p>
+<p name="paragrafoNome">Este é um parágrafo com Name.</p>
+<p class="paragrafoClasse">Este é um parágrafo com Classe.</p>
+
+<button onclick="alterarPropriedadePorID()">Alterar cor pelo ID</button>
+<button onclick="alterarPropriedadePorName()">Alterar cor pelo Name</button>
+<button onclick="alterarPropriedadePorClasse()">Alterar cor pela Classe</button>
+
+<script>
+function alterarPropriedadePorID() {
+    var paragrafo = document.getElementById("meuParagrafo");
+    paragrafo.style.color = "red";
+}
+
+function alterarPropriedadePorName() {
+    var paragrafos = document.getElementsByName("paragrafoNome");
+    for (var i = 0; i < paragrafos.length; i++) {
+        paragrafos[i].style.color = "blue";
+    }
+}
+
+function alterarPropriedadePorClasse() {
+    var paragrafos = document.getElementsByClassName("paragrafoClasse");
+    for (var i = 0; i < paragrafos.length; i++) {
+        paragrafos[i].style.color = "green";
+    }
+}
+</script>
+
+</body>
+</html>
